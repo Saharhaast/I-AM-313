@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewprot" content="width-device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script>
+        function setName() {
+            const nameField = document.getElementById("username");
+            const name = nameField.value;
+            const title = document.getElementById("profile-link");
+            title.innerText = name + "Profile";
+        }
+        function setImage(){
+            const img = document.getElementById("imglink").value;
+            const profileImage = document.getElementById("pic");
+            profileImage.style.backgroundImage = "url(" + img + ")"
+        }
+    </script>
+</head>
+
+<body>
+    <main>
+        <div class="parent" id="pic">
+            <div class="child">
+            </div>
+        </div>
+        <div class="row">
+            <a id="profile-link" href = https://github.com/Saharhaast>Saharhaast Profile</a id="profile-link">
+        </div>
+        <div class="buttons">
+            <div>
+            <label>Set the username </label>
+            <input type="text" id="username"/>
+            <button onclick="setName()">Set</button>
+        </div><div>
+            <label>Set profile image URL</label>
+            <input type="text" id="imglink"/>
+            <button onclick="setImage()">Set</button></div>
+        </div>
+        <div class="gallery">
+            <div class="image" id="first"></div>
+            <div class="image"></div>
+            <div class="image"></div>
+            <div class="image"></div>
+            <div class="image" style="grid-column: span 2"></div>
+            <div class="image"></div>
+            <div class="image"></div>
+            <div class="image"></div>
+        </div>
+    </main>
+</body>
+
+</html>
